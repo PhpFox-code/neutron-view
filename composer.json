@@ -1,6 +1,6 @@
 {
-  "name": "codelego/phpfox-view",
-  "description": "PhpFox View Component",
+  "name": "codelego/phpfox-view-manager",
+  "description": "Php presentation library for phpfox framework",
   "type": "library",
   "license": "MIT",
   "authors": [
