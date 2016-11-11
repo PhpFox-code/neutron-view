@@ -2,6 +2,7 @@
   "name": "codelego/phpfox-view",
   "description": "PhpFox View Component",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Nam Nguyen",
