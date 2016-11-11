@@ -20,6 +20,26 @@ class PhpRenderer implements RendererInterface
     protected $resolver;
 
     /**
+     * @inheritdoc
+     */
+    public function render($viewModel)
+    {
+        $__template_ = $this->getResolver()->resolve($viewModel->getTemplate());
+
+        ob_start();
+
+        $__vars_ = $viewModel->getVariables();
+
+        extract($__vars_);
+
+        unset($__vars_);
+
+        include $__template_;
+
+        return ob_get_clean();
+    }
+
+    /**
      * @return ResolverInterface
      */
     public function getResolver()
@@ -33,25 +53,5 @@ class PhpRenderer implements RendererInterface
     public function setResolver($resolver)
     {
         $this->resolver = $resolver;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function render($viewModel)
-    {
-        $__template_ = $this->getResolver()->resolve($viewModel->getTemplate());
-        
-        ob_start();
-
-        $__vars_ = $viewModel->getVariables();
-
-        extract($__vars_);
-
-        unset($__vars_);
-
-        include $__template_;
-
-        return ob_get_clean();
     }
 }

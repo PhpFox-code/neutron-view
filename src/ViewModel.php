@@ -2,26 +2,27 @@
 
 namespace Phpfox\View;
 
-
-class ViewModel
+final class ViewModel
 {
-    /**
-     * @var array
-     */
-    public $variables = [];
-
     /**
      * @var string
      */
     public $template = '';
 
     /**
+     * @var array
+     */
+    public $variables = [];
+
+    /**
      * ViewModel constructor.
      *
-     * @param array $variables
+     * @param string $template
+     * @param array  $variables
      */
-    public function __construct($variables = [])
+    public function __construct($template = null, $variables = [])
     {
+        $this->template = $template;
         $this->variables = $variables;
     }
 
