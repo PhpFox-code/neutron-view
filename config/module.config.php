@@ -1,5 +1,5 @@
 <?php
-namespace Phpfox\View;
+namespace Phpfox\ViewManager;
 
 return [
     'aliases'   => [

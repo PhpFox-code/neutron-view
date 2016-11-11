@@ -1,11 +1,11 @@
 <?php
 
-namespace Phpfox\View;
+namespace Phpfox\ViewManager;
 
 /**
  * Class PhpRenderer
  *
- * @package Phpfox\View
+ * @package Phpfox\ViewManager
  */
 class PhpRenderer implements RendererInterface
 {

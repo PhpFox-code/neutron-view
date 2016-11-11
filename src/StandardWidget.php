@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpfox\View;
+namespace Phpfox\ViewManager;
 
 class StandardWidget
 {
-    
+
 }

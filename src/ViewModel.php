@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpfox\View;
+namespace Phpfox\ViewManager;
 
 final class ViewModel
 {

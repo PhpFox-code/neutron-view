@@ -1,11 +1,11 @@
 <?php
 
-namespace Phpfox\View;
+namespace Phpfox\ViewManager;
 
 /**
  * Class TemplateMapResolver
  *
- * @package Phpfox\View
+ * @package Phpfox\ViewManager
  */
 class TemplateMapResolver implements ResolverInterface
 {
