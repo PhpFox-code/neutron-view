@@ -1,5 +1,5 @@
 {
-  "name": "codelego/phpfox-view-manager",
+  "name": "codelego/phpfox-view",
   "description": "Presentation layer library for phpfox framework",
   "type": "library",
   "license": "MIT",
@@ -13,12 +13,12 @@
   "prefer-stable": false,
   "autoload": {
     "psr-4": {
-      "Phpfox\\ViewManager\\": "src/"
+      "Phpfox\\View\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Phpfox\\ViewManager\\": "test/"
+      "Phpfox\\View\\": "test/"
     }
   }
 }
