@@ -1,6 +1,6 @@
 {
   "name": "codelego/phpfox-view",
-  "description": "Presentation layer library for phpfox framework",
+  "description": "View library for phpfox framework",
   "type": "library",
   "license": "MIT",
   "authors": [
