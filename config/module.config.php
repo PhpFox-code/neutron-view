@@ -3,6 +3,8 @@ namespace Phpfox\View;
 
 return [
     'services' => [
-        'phpRender' => PhpRenderer::class,
+        'map' => [
+            'phpRender' => [null, PhpRenderer::class,],
+        ],
     ],
 ];
