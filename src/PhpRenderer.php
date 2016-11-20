@@ -2,29 +2,30 @@
 
 namespace Phpfox\View;
 
+
 /**
  * Class PhpRenderer
  *
  * @package Phpfox\View
  */
-class PhpRenderer implements RendererInterface
+class PhpRenderer implements RendererInterface, ResolverInterface
 {
     /**
      * @var array
      */
-    protected $templateFiles = [];
+    protected $map = [];
 
-    /**
-     * @var ResolverInterface
-     */
-    protected $resolver;
+    public function __construct()
+    {
+        $this->reset();
+    }
 
     /**
      * @inheritdoc
      */
     public function render($viewModel)
     {
-        $__template_ = $this->getResolver()->resolve($viewModel->getTemplate());
+        $__template_ = $this->resolve($viewModel->getTemplate());
 
         ob_start();
 
@@ -39,19 +40,23 @@ class PhpRenderer implements RendererInterface
         return ob_get_clean();
     }
 
-    /**
-     * @return ResolverInterface
-     */
-    public function getResolver()
+    public function reset()
     {
-        return $this->resolver;
+        $this->map = config('views');
+        return $this;
     }
 
     /**
-     * @param ResolverInterface $resolver
+     * @param string $name
+     *
+     * @return string
      */
-    public function setResolver($resolver)
+    public function resolve($name)
     {
-        $this->resolver = $resolver;
+        if (!isset($this->map[$name])) {
+            throw new \InvalidArgumentException("Can not resolve path of '{$name}'");
+        }
+
+        return PHPFOX_DIR . DS . $this->map[$name];
     }
 }

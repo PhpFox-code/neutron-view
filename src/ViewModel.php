@@ -2,7 +2,7 @@
 
 namespace Phpfox\View;
 
-final class ViewModel
+class ViewModel
 {
     /**
      * @var string
