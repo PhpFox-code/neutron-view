@@ -11,6 +11,16 @@ class ViewLayout extends ViewModel
 {
     public function __construct()
     {
-        parent::__construct('layout/default',[]);
+        parent::__construct('layout/default', []);
+    }
+
+    /**
+     * @return $this
+     */
+    public function prepare()
+    {
+        events()->trigger('onViewLayoutPrepare', $this);
+
+        return $this;
     }
 }
