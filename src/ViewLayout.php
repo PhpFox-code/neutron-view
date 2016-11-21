@@ -9,9 +9,14 @@ namespace Phpfox\View;
  */
 class ViewLayout extends ViewModel
 {
+    /**
+     * @var string
+     */
+    protected $pageName = '';
+
     public function __construct()
     {
-        parent::__construct('layout/default', []);
+        parent::__construct('layout/master/default', []);
     }
 
     /**
@@ -21,6 +26,25 @@ class ViewLayout extends ViewModel
     {
         events()->trigger('onViewLayoutPrepare', $this);
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPageName()
+    {
+        return $this->pageName;
+    }
+
+    /**
+     * @param string $pageName
+     *
+     * @return $this
+     */
+    public function setPageName($pageName)
+    {
+        $this->pageName = $pageName;
         return $this;
     }
 }

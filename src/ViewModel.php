@@ -36,10 +36,13 @@ class ViewModel
 
     /**
      * @param string $template
+     *
+     * @return $this
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+        return $this;
     }
 
     /**
@@ -52,10 +55,13 @@ class ViewModel
 
     /**
      * @param array $variables
+     *
+     * @return $this
      */
     public function setVariables($variables)
     {
         $this->variables = $variables;
+        return $this;
     }
 
     /**

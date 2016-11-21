@@ -20,12 +20,35 @@ class PhpRenderer implements RendererInterface, ResolverInterface
         $this->reset();
     }
 
+    public function partial($templateName, $__vars_ = [])
+    {
+        $__template_ = $this->resolve($templateName);
+
+        if (!$__template_) {
+            return '';
+        }
+
+        ob_start();
+
+        extract($__vars_);
+
+        unset($__vars_);
+
+        include $__template_;
+
+        return ob_get_clean();
+    }
+
     /**
      * @inheritdoc
      */
     public function render($viewModel)
     {
         $__template_ = $this->resolve($viewModel->getTemplate());
+
+        if (!$__template_) {
+            return '';
+        }
 
         ob_start();
 
