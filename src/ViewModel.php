@@ -76,4 +76,13 @@ class ViewModel
         }
         return $this;
     }
+
+    public function forge()
+    {
+        return service('template')->parital($this->template, $this->variables);
+    }
+
+    public function terminate()
+    {
+    }
 }
