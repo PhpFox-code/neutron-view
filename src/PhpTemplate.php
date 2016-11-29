@@ -1,12 +1,12 @@
 <?php
 
-namespace Phpfox\View;
+namespace Neutron\View;
 
 
 /**
  * Class PhpTemplate
  *
- * @package Phpfox\View
+ * @package Neutron\View
  */
 class PhpTemplate implements ViewRenderInterface
 {

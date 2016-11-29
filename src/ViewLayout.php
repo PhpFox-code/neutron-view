@@ -1,11 +1,11 @@
 <?php
 
-namespace Phpfox\View;
+namespace Neutron\View;
 
 /**
  * Class ViewLayout
  *
- * @package Phpfox\View
+ * @package Neutron\View
  */
 class ViewLayout extends ViewModel
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Phpfox\View;
+namespace Neutron\View;
 
 return [
     'services' => [

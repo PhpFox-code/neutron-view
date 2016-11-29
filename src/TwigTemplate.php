@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpfox\View;
+namespace Neutron\View;
 
 
 class TwigTemplate implements ViewRenderInterface
