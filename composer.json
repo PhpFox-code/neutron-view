@@ -1,5 +1,5 @@
 {
-  "name": "codelego/phpfox-view",
+  "name": "codelego/neutron-view",
   "description": "View library for phpfox framework",
   "type": "library",
   "license": "MIT",
